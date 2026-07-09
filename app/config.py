@@ -1,0 +1,1 @@
+#variaveis de ambiente e configuração do app. Usado em app/main.py, app/services/ask.py e app/services/documents.py.

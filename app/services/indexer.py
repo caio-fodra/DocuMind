@@ -1,0 +1,1 @@
+#indexacao com tf idf, chunking, persistencia em disco, reindexacao idempotente

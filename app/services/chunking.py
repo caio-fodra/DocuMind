@@ -1,0 +1,1 @@
+#funções de chunking de texto, usadas pelo indexador. Não conversam com banco/rede.

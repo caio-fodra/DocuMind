@@ -1,0 +1,1 @@
+#montar base de dados SQLite e tabelas, se não existirem. Usado no startup do app (lifespan) e nos testes.
