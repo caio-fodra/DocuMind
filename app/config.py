@@ -13,6 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 class Settings:
     data_dir: Path
     db_path: Path
+    index_path: Path
+    chunk_size: int
+    chunk_overlap: int
 
 
 def _build_settings() -> Settings:
@@ -20,6 +23,9 @@ def _build_settings() -> Settings:
     return Settings(
         data_dir=data_dir,
         db_path=Path(os.getenv("DOCUMIND_DB_PATH", str(data_dir / "documind.db"))),
+        index_path=Path(os.getenv("DOCUMIND_INDEX_PATH", str(data_dir / "index.joblib"))),
+        chunk_size=int(os.getenv("DOCUMIND_CHUNK_SIZE", "60")),
+        chunk_overlap=int(os.getenv("DOCUMIND_CHUNK_OVERLAP", "15")),
     )
 
 
