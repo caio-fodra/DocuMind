@@ -16,6 +16,8 @@ class Settings:
     index_path: Path
     chunk_size: int
     chunk_overlap: int
+    top_k: int
+    relevance_threshold: float
 
 
 def _build_settings() -> Settings:
@@ -26,6 +28,8 @@ def _build_settings() -> Settings:
         index_path=Path(os.getenv("DOCUMIND_INDEX_PATH", str(data_dir / "index.joblib"))),
         chunk_size=int(os.getenv("DOCUMIND_CHUNK_SIZE", "60")),
         chunk_overlap=int(os.getenv("DOCUMIND_CHUNK_OVERLAP", "15")),
+        top_k=int(os.getenv("DOCUMIND_TOP_K", "3")),
+        relevance_threshold=float(os.getenv("DOCUMIND_RELEVANCE_THRESHOLD", "0.1")),
     )
 
 
