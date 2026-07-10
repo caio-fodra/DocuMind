@@ -1,12 +1,11 @@
-"""
-lista de documentos para popular o banco de dados.
-"""
+#lista de documentos para popular o banco de dados.
+
 
 from __future__ import annotations
 
 import sys
 
-from app.database import get_connection, init_db
+from data.database import get_connection, init_db
 
 # (título, categoria, visibilidade, conteúdo) — massa 100% fictícia.
 DOCUMENTS: list[tuple[str, str, str, str]] = [

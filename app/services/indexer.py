@@ -8,7 +8,7 @@ import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 from app.config import settings
-from app.database import get_connection
+from data.database import get_connection
 from app.services.chunking import chunk_text
 
 #Stopwords pra reduzir ruído

@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
 
-from app.database import get_connection
+from data.database import get_connection
 from app.models import DocumentCreate, DocumentOut
 from app.services.indexer import build_index, reindex_document
 

@@ -5,7 +5,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
 
-from app.database import init_db
+from data.database import init_db
 from app.routes import ask, documents, health
 
 logger = logging.getLogger("documind")
