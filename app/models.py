@@ -23,12 +23,14 @@ class DocumentCreate(BaseModel):
     title: str = Field(..., min_length=1, max_length=300)
     content: str = Field(..., min_length=1)
     visibility: Visibility = Visibility.public
+    category: str | None = Field(default=None, max_length=100)
 
 
 class DocumentOut(BaseModel):
     id: int
     title: str
     visibility: Visibility
+    category: str | None = None
     created_at: str
 
 
