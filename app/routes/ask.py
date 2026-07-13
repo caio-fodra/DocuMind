@@ -12,7 +12,15 @@ router = APIRouter(tags=["ask"])
 
 @router.post("/ask", response_model=AskResponse)
 def ask(payload: AskRequest) -> AskResponse:
-    #TODO: recuperar os chunks relevantes via retrieve(payload.question, payload.top_k); 
-    # gerar a resposta via generate_answer(payload.question, chunks); montar e retornar 
-    # o AskResponse.
-    pass
+    chunks = retrieve(payload.question, payload.profile)
+    answer, confidence = generate_answer(payload.question, chunks)
+    sources = [
+        Source(
+            document_id=chunk.document_id,
+            title=chunk.title,
+            chunk_index=chunk.chunk_index,
+            score=chunk.score,
+        )
+        for chunk in chunks
+    ]
+    return AskResponse(answer=answer, confidence=confidence, sources=sources)
