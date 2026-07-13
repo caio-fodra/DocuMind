@@ -1,4 +1,6 @@
-#indexacao com tf idf, chunking, persistencia em disco, reindexacao idempotente
+# CLI de reindexação: reprocessa todos os documentos e reconstrói o índice TF-IDF.
+# Uso: python -m app.indexer
+# A lógica de indexação vive em app/services/indexer.py; aqui é só o ponto de entrada.
 
 from __future__ import annotations
 
