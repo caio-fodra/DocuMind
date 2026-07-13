@@ -6,7 +6,13 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv(override=False)
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+_TRUTHY = {"1", "true", "yes", "on"}
 
 
 @dataclass(frozen=True)
@@ -18,6 +24,7 @@ class Settings:
     chunk_overlap: int
     top_k: int
     relevance_threshold: float
+    auto_seed: bool
 
 
 def _build_settings() -> Settings:
@@ -30,6 +37,7 @@ def _build_settings() -> Settings:
         chunk_overlap=int(os.getenv("DOCUMIND_CHUNK_OVERLAP", "15")),
         top_k=int(os.getenv("DOCUMIND_TOP_K", "3")),
         relevance_threshold=float(os.getenv("DOCUMIND_RELEVANCE_THRESHOLD", "0.1")),
+        auto_seed=os.getenv("DOCUMIND_AUTO_SEED", "false").lower() in _TRUTHY,
     )
 
 
