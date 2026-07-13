@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    container_name: documind-api
+    ports:
+      - "8000:8000"
+    environment:
+      DOCUMIND_RELEVANCE_THRESHOLD: "0.1"
+      DOCUMIND_TOP_K: "3"
+      DOCUMIND_AUTO_SEED: "true"
+    volumes:
+      - ./data:/app/data
