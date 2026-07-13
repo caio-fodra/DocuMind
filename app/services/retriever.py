@@ -1,4 +1,4 @@
-#filtro de chunks de documentos baseado na similaridade com a pergunta do usuário. Usado em app/services/ask.py.
+#filtro de chunks de documentos baseado na similaridade com a pergunta do usuário. Usado em app/routes/ask.py.
 from __future__ import annotations
 
 from dataclasses import dataclass
