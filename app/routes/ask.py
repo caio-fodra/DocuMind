@@ -1,4 +1,4 @@
-#rota de pergunta e resposta
+# Rota de pergunta e resposta.
 from __future__ import annotations
 
 from fastapi import APIRouter

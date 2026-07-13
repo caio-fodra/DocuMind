@@ -1,6 +1,6 @@
-#definição de guardrails contra prompt injection
-#sanitize_sentences() descarta frasese que são instruções injetadas
-#redact() redige tokens que parecem segredos (ex.: FAKE-SECRET-123) caso escapem da etapa anterior
+# Definição de guardrails contra prompt injection.
+# sanitize_sentences() descarta frases que são instruções injetadas.
+# redact() redige tokens que parecem segredos (ex.: FAKE-SECRET-123) caso escapem da etapa anterior.
 
 from __future__ import annotations
 

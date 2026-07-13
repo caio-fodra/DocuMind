@@ -1,5 +1,5 @@
-#definição de visibilidade, confiança
-#modelos de entrada e saída para documentos e perguntas
+# Definição de visibilidade e confiança.
+# Modelos de entrada e saída para documentos e perguntas.
 
 from __future__ import annotations
 

@@ -1,4 +1,4 @@
-#variaveis de ambiente e configuração do app. Usado em app/main.py, app/routes/ask.py e app/routes/documents.py.
+# Variáveis de ambiente e configuração do app. Usado em app/main.py, app/routes/ask.py e app/routes/documents.py.
 
 from __future__ import annotations
 

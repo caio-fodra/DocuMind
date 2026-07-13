@@ -1,4 +1,4 @@
-#funções de chunking de texto, usadas pelo indexador. Não conversam com banco/rede.
+# Funções de chunking de texto, usadas pelo indexador. Não conversam com banco/rede.
 
 from __future__ import annotations
 

@@ -1,4 +1,4 @@
-#Rotas de cadastro e listagem de documentos
+# Rotas de cadastro e listagem de documentos.
 from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException

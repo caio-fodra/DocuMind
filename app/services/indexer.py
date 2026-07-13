@@ -1,4 +1,4 @@
-#indexacao com tf idf, chunking, persistencia em disco, reindexacao idempotente
+# Indexação com TF-IDF: chunking, persistência em disco e reindexação idempotente.
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ from app.config import settings
 from data.database import get_connection
 from app.services.chunking import chunk_text
 
-#Stopwords pra reduzir ruído
+# Stopwords para reduzir ruído.
 PORTUGUESE_STOP_WORDS = [
     "a", "ao", "aos", "aquela", "aquelas", "aquele", "aqueles", "aquilo", "as",
     "ate", "com", "como", "da", "das", "de", "dela", "delas", "dele", "deles",

@@ -1,4 +1,4 @@
-#montar base de dados SQLite e tabelas, se não existirem. Usado no startup do app (lifespan) e nos testes.
+# Monta a base de dados SQLite e as tabelas, se não existirem. Usado no startup do app (lifespan) e nos testes.
 
 from __future__ import annotations
 
@@ -29,7 +29,7 @@ def init_db() -> None:
                 created_at TEXT NOT NULL DEFAULT (datetime('now'))
             );
 
-            -- trechos derivados dos documentos (dado de busca, reconstruível)
+            -- Trechos derivados dos documentos (dado de busca, reconstruível).
             CREATE TABLE IF NOT EXISTS chunks (
                 id          INTEGER PRIMARY KEY AUTOINCREMENT,
                 document_id INTEGER NOT NULL,
